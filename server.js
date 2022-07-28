@@ -1,4 +1,4 @@
-const { ApolloServer, gql } = require("apollo-server")
+import { ApolloServer, gql } from "apollo-server";
 
 const typeDefs = gql`
     type Query {
@@ -17,6 +17,4 @@ const server = new ApolloServer({
     resolvers
 })
 
-server
-    .listen()
-    .then(() => console.log("Server is running on http://loaclhost:4000/"))
+server.listen().then(() => console.log("Server is running on http://loaclhost:4000/"))
